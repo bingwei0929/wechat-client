@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简易聊天应用</title>
+    <!-- 修正 CSS 引用路径，适配 GitHub Pages 根目录部署 -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>简易聊天</h1>
+            <div class="user-info">
+                <input type="text" id="username" placeholder="输入你的昵称" />
+                <button id="join-btn">加入聊天</button>
+            </div>
+        </div>
+
+        <div class="chat-messages" id="messages"></div>
+
+        <div class="chat-input">
+            <input type="text" id="message-input" placeholder="输入消息..." disabled />
+            <button id="send-btn" disabled>发送</button>
+        </div>
+    </div>
+
+    <!-- 修正 JS 引用路径，适配 GitHub Pages 根目录部署 -->
+    <script src="./script.js"></script>
+</body>
+</html>
