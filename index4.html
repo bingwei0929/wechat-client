@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script>
+        // 替换为你的路由侠公网地址
+        const ws = new WebSocket('ws://ihjjpj.f1.luyouxia.net:12049');
+
+        ws.onopen = () => {
+            console.log("连接成功！");
+            ws.send("测试消息");
+        };
+
+        ws.onmessage = (e) => {
+            console.log("收到服务端消息：", e.data);
+        };
+
+        ws.onerror = (e) => {
+            console.error("连接错误：", e);
+        };
+
+        ws.onclose = (e) => {
+            console.log("连接关闭，错误码：", e.code);
+        };
+    </script>
+</body>
+</html>
